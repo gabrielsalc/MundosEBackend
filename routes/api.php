@@ -18,4 +18,4 @@ use App\Http\Controllers\Api\ContactController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('/contact', [api\ContactController::class, 'Contact']);
+Route::post('/contact', [ContactController::class, 'Contact']);
