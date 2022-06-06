@@ -51,7 +51,8 @@ class ProductoApiController extends Controller
             'name' => request()->name,
             'email' => request()->email,
             'descripcion' => request()->descripcion,
-            'precio' => request()->precio
+            'precio' => request()->precio,
+
         ]);
     }
 } 
