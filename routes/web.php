@@ -27,4 +27,4 @@ Route::get('/contact', [PageController::class, 'contact']);
 //Route::patch('/productos/{producto}', [ProductoController::class, 'update']) ->name('productos.update');
 //Route::delete('/productos/{producto}', [ProductoController::class, 'destroy']) ->name('productos.destroy');
 
-Route::resource('productos', ProductoController::class);
+Route::resource('mensajes', ProductoController::class);

@@ -23,8 +23,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/productos">MENSAJES</a>
+                        <a class="nav-link" href="/mensajes">Mensajes</a>
                     </li>
                 </ul>
             </div>
