@@ -1,8 +1,9 @@
 <?php
 
+use App\Models\Producto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\ContactController;
+use App\Http\Controllers\ProductoApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,8 @@ use App\Http\Controllers\Api\ContactController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-Route::post('/contact', [ContactController::class, 'Contact']);
+Route::get('/productos', [ProductoApiController::class, 'index'])->name('api.productos.index');
+
+Route::get('/productos{producto}', [ProductoApiController::class, 'show'])->name('api.productos.show');
+
+Route::post('/productos', [ProductoApiController::class, 'store'])->name('api.productis.store');
