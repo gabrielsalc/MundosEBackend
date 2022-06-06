@@ -15,9 +15,10 @@
         <div class="col col-md-3 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"><a href="/crud/public/productos/{{$producto->id}}">{{$producto->name}}</a></h5>
-                    <p class="card-text">{{$producto->descripcion}}</p>
+                    <h5 class="card-title"><a href="/productos/{{$producto->id}}">{{$producto->name}}</a></h5>
+                    <h3 class="card-text">${{$producto->email}}</h3>
                     <h3 class="card-text">${{$producto->precio}}</h3>
+                    <p class="card-text">{{$producto->descripcion}}</p>
                 </div>
                 <div class="card-footer d-flex justify-content-around">
                     <a href="/productos/edit/{{$producto->id}}" class="btn btn-secondary">Editar</a>

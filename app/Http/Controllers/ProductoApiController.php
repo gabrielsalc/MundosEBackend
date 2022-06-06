@@ -14,8 +14,9 @@ class ProductoApiController extends Controller
             return [
                 'id' => $producto->id,
                 'name' => $producto->name,
-                'descripcion' => $producto->descripcion,
+                'email' => $producto->email,
                 'precio' => $producto->precio,
+                'descripcion' => $producto->descripcion,
                 'url' =>route('api.productos.show', $producto),
             ];
         });
@@ -38,8 +39,9 @@ class ProductoApiController extends Controller
             'data' => [
                 'id' => $producto->id,
                 'name' => $producto->nombre,
-                'descripcion' => $producto->descripcion,
+                'email' => $producto->email,
                 'precio' => $producto->precio,
+                'descripcion' => $producto->descripcion,
             ],
         ];
     }
@@ -47,6 +49,7 @@ class ProductoApiController extends Controller
     {
         $producto = Producto::create([
             'name' => request()->name,
+            'email' => request()->email,
             'descripcion' => request()->descripcion,
             'precio' => request()->precio
         ]);

@@ -40,8 +40,9 @@ class ProductoController extends Controller
     {
         $producto = Producto::create([
             'name' => $request->name,
+            'email' => $request->email,
+            'precio' => $request->precio,
             'descripcion' => $request->descripcion,
-            'precio' => $request->precio
         ]);
         return redirect()->route('productos.index')->with('status', "Se creó el producto $producto->name correctamente");
     }
@@ -80,8 +81,10 @@ class ProductoController extends Controller
     {
         $producto->update([
             'name' => $request->name,
+            'email' => $request->email,
+            'precio' => $request->precio,
             'descripcion' => $request->descripcion,
-            'precio' => $request->precio
+            
         ]);
         return redirect()->route('productos.index')->with('status', "Se edito el producto $producto->name correctamente");
     }
