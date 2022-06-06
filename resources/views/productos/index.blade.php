@@ -15,7 +15,7 @@
         <div class="col col-md-3 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"><a href="/productos/{{$producto->id}}">{{$producto->name}}</a></h5>
+                    <h5 class="card-title"><a href="/mensajes/{{$producto->id}}">{{$producto->name}}</a></h5>
                     <h3 class="card-text">{{$producto->email}}</h3>
                     <h3 class="card-text">{{$producto->precio}}</h3>
                     <h3 class="card-text">{{$producto->descripcion}}</h3>
