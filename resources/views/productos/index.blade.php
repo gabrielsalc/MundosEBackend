@@ -4,7 +4,7 @@
 <div class="col-12 col-md-8 mx-auto my-5">
     <h1>Productos</h1>
     <p>Todos Nuestros Productos</p>
-    <a class="btn btn-primary mb-4" href="/crud/public/productos/create">Crear Producto</a>
+    <a class="btn btn-primary mb-4" href="/productos/create">Crear Producto</a>
     <div class="row">
         @if (session('status'))
             <div class="alert alert-success">
@@ -20,7 +20,7 @@
                     <h3 class="card-text">${{$producto->precio}}</h3>
                 </div>
                 <div class="card-footer d-flex justify-content-around">
-                    <a href="/crud/public/productos/edit/{{$producto->id}}" class="btn btn-secondary">Editar</a>
+                    <a href="/productos/edit/{{$producto->id}}" class="btn btn-secondary">Editar</a>
                     <form action="{{route('productos.destroy',$producto)}}" method="POST">
                         @csrf
                         @method('DELETE')
