@@ -57,6 +57,5 @@ class ProductoApiController extends Controller
         ]);
         $mensaje = new ContactanosMailable($request->all());
         Mail::to('gabrielsalcedo.gs@gmail.com')->send($mensaje);
-
     }
 } 
