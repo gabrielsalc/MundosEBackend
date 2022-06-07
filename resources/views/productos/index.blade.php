@@ -4,7 +4,6 @@
 <div class="col-12 col-md-8 mx-auto my-5">
     <h1>MENSAJES</h1>
     <p>TODOS LOS MENSAJES</p>
-    <a class="btn btn-primary mb-4" href="/productos/create">Crear Producto</a>
     <div class="row">
         @if (session('status'))
             <div class="alert alert-success">
