@@ -4,6 +4,8 @@ use App\Models\Producto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoApiController;
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,8 @@ Route::get('/productos', [ProductoApiController::class, 'index'])->name('api.pro
 Route::get('/productos{producto}', [ProductoApiController::class, 'show'])->name('api.productos.show');
 
 Route::post('/productos', [ProductoApiController::class, 'store'])->name('api.productos.store');
+
+Route::get('contactanos', function(){
+    $correo = new ContactanosMailable;
+    Mail::to('gabrielsalcedo.gs@gmail.com')->send($correo);
+});
