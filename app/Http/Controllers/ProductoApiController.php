@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use Illuminate\Http\Request;
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 
 class ProductoApiController extends Controller
 {
@@ -54,5 +56,7 @@ class ProductoApiController extends Controller
             'precio' => request()->precio,
 
         ]);
+        Mail::to('gabrielsalcedo.gs@gmail.com')->send($producto);
+
     }
 } 

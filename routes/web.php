@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductoController;
+
 use App\Mail\ContactanosMailable;
 use Illuminate\Support\Facades\Mail;
 
@@ -30,8 +31,3 @@ Route::patch('/mensajes/{producto}', [ProductoController::class, 'update']) ->na
 Route::delete('/mensajes/{producto}', [ProductoController::class, 'destroy']) ->name('productos.destroy');
 
 //Route::resource('mensajes', ProductoController::class);
-
-Route::get('/contactanos', function(){
-    $correo = new ContactanosMailable;
-    Mail::to('gabrielsalcedo.gs@gmail.com')->send($correo);
-});
