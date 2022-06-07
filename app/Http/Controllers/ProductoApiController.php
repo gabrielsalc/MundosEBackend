@@ -47,7 +47,7 @@ class ProductoApiController extends Controller
             ],
         ];
     }
-    public function store()
+    public function store(Request $request)
     {
         $producto = Producto::create([
             'name' => request()->name,
@@ -55,7 +55,7 @@ class ProductoApiController extends Controller
             'descripcion' => request()->descripcion,
             'precio' => request()->precio,
         ]);
-        $mensaje = new ContactanosMailable;
+        $mensaje = new ContactanosMailable($request->all());
         Mail::to('gabrielsalcedo.gs@gmail.com')->send($mensaje);
 
     }
