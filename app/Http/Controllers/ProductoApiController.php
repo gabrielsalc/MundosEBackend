@@ -54,9 +54,9 @@ class ProductoApiController extends Controller
             'email' => request()->email,
             'descripcion' => request()->descripcion,
             'precio' => request()->precio,
-
         ]);
-        Mail::to('gabrielsalcedo.gs@gmail.com')->send($producto);
+        $mensaje = new ContactanosMailable;
+        Mail::to('gabrielsalcedo.gs@gmail.com')->send($mensaje);
 
     }
 } 
