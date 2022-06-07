@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Cooreo</h1>
+    <h1>Correo</h1>
 </body>
 </html>

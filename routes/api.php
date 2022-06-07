@@ -24,7 +24,7 @@ Route::get('/productos{producto}', [ProductoApiController::class, 'show'])->name
 
 Route::post('/productos', [ProductoApiController::class, 'store'])->name('api.productos.store');
 
-Route::get('contactanos', function(){
+Route::get('/contactanos', function(){
     $correo = new ContactanosMailable;
     Mail::to('gabrielsalcedo.gs@gmail.com')->send($correo);
 });
